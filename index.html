@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/bb55a3add2.js" crossorigin="anonymous"></script>
+
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Form Validation!</h1>
+<section class="form-container">
+    <form name="RegForm" onsubmit="return error()" method="get">
+      <div class="form-group">
+        <label for="name" class="label">Your Full Name</label><br>
+        <i class="fa-solid fa-user icon"></i>
+        <input type="text" class="input-field" placeholder="abc" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="label">Your Email-id</label><br>
+        <i class="fa-solid fa-envelope icon"></i>
+        <input type="email" class="input-field" placeholder="abc@gmail.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password" class="label">Password</label><br>
+        <i class="fa-solid fa-lock icon"></i>
+        <input type="password" name="pass" id="password" class="input-field" placeholder="Atleast 5 characters" required>
+    </div>
+
+    <input type="submit" class="submit">
+
+</section>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
