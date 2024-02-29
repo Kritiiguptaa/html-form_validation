@@ -5,32 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/bb55a3add2.js" crossorigin="anonymous"></script>
-
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/Form-Validation/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Form-Validation/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Form-Validation/icon/favicon-16x16.png">
+<link rel="manifest" href="/Form-Validation/icon/site.webmanifest"> -->
     <title>Form Validation</title>
 </head>
 <body>
+    <div class="heading-container">
     <h1>Form Validation!</h1>
+
 <section class="form-container">
-    <form name="RegForm" onsubmit="return error()" method="get">
+    <form name="RegForm"  method="get" id="form">
       <div class="form-group">
         <label for="name" class="label">Your Full Name</label><br>
         <i class="fa-solid fa-user icon"></i>
-        <input type="text" class="input-field" placeholder="abc" required>
+        <input type="text" name="name" class="input-field" id="username" placeholder="abc(Atleast 5 characters)" required>
+        <small></small>
+
     </div>
 
     <div class="form-group">
         <label for="email" class="label">Your Email-id</label><br>
         <i class="fa-solid fa-envelope icon"></i>
-        <input type="email" class="input-field" pattern=".+@gmail\.com" placeholder="abc@gmail.com" required>
-    </div>
+        <input type="email" name="mail" id="email" class="input-field" placeholder="abc@gmail.com" required>
+        <small></small>
 
+    </div>
+    <div class="form-group">
+        <label for="phone" class="label">Your Phone no.</label><br>
+        <i class="fa-solid fa-phone icon"></i>
+        <input type="tel" name="phoneno." id="phoneno" class="input-field" placeholder="Without country code"  required>
+        <small></small>
+
+    </div>
+   
     <div class="form-group">
         <label for="password" class="label">Password</label><br>
         <i class="fa-solid fa-lock icon"></i>
-        <input type="password" name="pass" id="password" class="input-field" placeholder="Atleast 5 characters" required>
+        <input type="password" name="pass" id="password"   class="input-field" placeholder="Atleast 8 characters"  required>
+        <small></small>
+
+    </div>
+    
+    <div class="form-group">
+        <label for="cpassword" class="label">Confirm Password</label><br>
+        <i class="fa-solid fa-lock icon"></i>
+        <input type="password" name="cpass" id="confirm-password" class="input-field" placeholder="Atleast 8 characters" required>
+        <small></small>
+
     </div>
 
-    <input type="submit" class="submit">
+    <input type="submit" class="submit" id="button" value="Sign Up">
+</div>
 
 </section>
     </form>
